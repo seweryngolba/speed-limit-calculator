@@ -26,7 +26,7 @@ speedLimit.forEach((speedSign) => {
 calculateBtn.addEventListener("click", () => {
   const inputValue = parseInt(speedInput.value);
 
-  if (activeSpeedLimit !== null) {
+  if (activeSpeedLimit !== null && !isNaN(inputValue)) {
     const difference = inputValue - activeSpeedLimit;
 
     if (difference > 0) {
@@ -36,8 +36,15 @@ calculateBtn.addEventListener("click", () => {
       money.textContent = `0 PLN`;
       points.textContent = `0 PKT`;
     }
+    container.classList.add("active");
+  } else {
+    alert("Wprowadź liczbę i wybierz limit prędkości");
   }
-  container.classList.add("active");
+});
+
+speedInput.addEventListener("input", () => {
+  const inputValue = speedInput.value.trim();
+  speedInput.value = inputValue.replace(/[^\d-]/g, "");
 });
 
 speedInput.addEventListener("keyup", () => {
