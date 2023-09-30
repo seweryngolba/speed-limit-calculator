@@ -22,13 +22,16 @@ body {
   background: lightcyan;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 
 .container h1 {
   font-size: 24px;
+  color: slategrey;
+  margin-top: 20px;
 }
 
 .speed-data {
@@ -72,6 +75,26 @@ button {
   padding: 5px 8px;
   border-radius: 5px;
   border: none;
-  background: blue;
+  background: slategray;
   color: #fff;
+}
+
+.total {
+  margin-top: 20px;
+  width: 240px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  bottom: 20px;
+  position: absolute;
+}
+
+.money h2,
+.points h2 {
+  font-size: 18px;
+}
+
+.money p,
+.points p {
+  text-align: center;
 }
