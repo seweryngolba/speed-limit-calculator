@@ -10,7 +10,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: lightsteelblue;
+  background: linear-gradient(to right, #b92b27, #1565c0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@ body {
 
 .container {
   width: 450px;
-  height: 180px;
+  height: 190px;
   background: lightcyan;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 }
 
 .container.active {
-  height: 230px;
+  height: 260px;
 }
 
 .container h1 {
@@ -75,6 +75,16 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.penaltyBox {
+  display: flex;
+  align-items: center;
+}
+
+.penaltyBox label {
+  font-size: 12px;
+  margin-left: 4px;
 }
 
 button {
